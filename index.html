@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTFOLIO | Web Director & Front-End Engineer</title>
+  <style>
+    /* --------------------------------------------------
+       RESET & BASE STYLES
+    -------------------------------------------------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      color: #333333;
+      background-color: #f8f9fa;
+      line-height: 1.7;
+    }
+    a {
+      color: #0f4c81;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    a:hover {
+      opacity: 0.7;
+    }
+
+    /* --------------------------------------------------
+       LAYOUT & CONTAINERS
+    -------------------------------------------------- */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    section {
+      padding: 60px 0;
+    }
+    section:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+      color: #0f4c81;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background-color: #0f4c81;
+      margin: 10px auto 0;
+    }
+
+    /* --------------------------------------------------
+       HERO / HEADER
+    -------------------------------------------------- */
+    .hero {
+      background: linear-gradient(135deg, #0f4c81 0%, #1b2a47 100%);
+      color: #ffffff;
+      padding: 100px 0 80px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* --------------------------------------------------
+       SKILLS
+    -------------------------------------------------- */
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .skill-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    }
+    .skill-card h3 {
+      font-size: 1.2rem;
+      color: #0f4c81;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #f0f4f8;
+      padding-bottom: 8px;
+    }
+    .skill-card ul {
+      list-style: none;
+    }
+    .skill-card li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .skill-card li::before {
+      content: "・";
+      color: #0f4c81;
+      font-weight: bold;
+    }
+
+    /* --------------------------------------------------
+       WORKS / PROJECTS
+    -------------------------------------------------- */
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .work-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    }
+    .work-content {
+      padding: 25px;
+    }
+    .work-tag {
+      display: inline-block;
+      background: #eef4fa;
+      color: #0f4c81;
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .work-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .work-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .work-details {
+      font-size: 0.85rem;
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 6px;
+    }
+    .work-details div {
+      margin-bottom: 4px;
+    }
+
+    /* --------------------------------------------------
+       STRENGTHS
+    -------------------------------------------------- */
+    .strength-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .strength-item {
+      background: #ffffff;
+      border-left: 4px solid #0f4c81;
+      padding: 20px 25px;
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .strength-item h3 {
+      font-size: 1.1rem;
+      color: #0f4c81;
+      margin-bottom: 8px;
+    }
+    .strength-item p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    /* --------------------------------------------------
+       FOOTER
+    -------------------------------------------------- */
+    footer {
+      background-color: #1b2a47;
+      color: #ffffff;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.85rem;
+    }
+
+    /* --------------------------------------------------
+       RESPONSIVE
+    -------------------------------------------------- */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 0.95rem;
+      }
+      section {
+        padding: 40px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="container">
+      <h1>PORTFOLIO</h1>
+      <p>Web Director & Front-End Engineer</p>
+    </div>
+  </header>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">SKILLS & TOOLS</h2>
+      <div class="skill-grid">
+        
+        <div class="skill-card">
+          <h3>Web Direction & 上流工程</h3>
+          <ul>
+            <li>要件定義・顧客ヒアリング</li>
+            <li>ワイヤーフレーム・構成案作成 (Figma / XD)</li>
+            <li>サイト運用保守計画立案・運用改善</li>
+            <li>公式SNS運用 (企画・投稿・スケジュール管理)</li>
+            <li>GA4アクセス解析・改善提案</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Development & CMS</h3>
+          <ul>
+            <li>HTML5 / CSS3 (レスポンシブコーディング)</li>
+            <li>JavaScript / PHP</li>
+            <li>PowerCMS (大規模サイト運用保守)</li>
+            <li>WordPress (サイト構築・カスタマイズ)</li>
+            <li>Git / GitHub (バージョン管理)</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Design & Business Tools</h3>
+          <ul>
+            <li>Figma / XD</li>
+            <li>Photoshop / Illustrator</li>
+            <li>Excel (データ集計・店舗数値管理)</li>
+            <li>Word / PowerPoint (企画書・マニュアル作成)</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS SECTION -->
+  <section id="works">
+    <div class="container">
+      <h2 class="section-title">WORKS & PROJECTS</h2>
+      <div class="works-grid">
+
+        <!-- Work 1 -->
+        <div class="work-card">
+          <div class="work-content">
+            <span class="work-tag">運用保守 / SNS運用 / GA4</span>
+            <h3>大規模Webサイト運用保守・SNS発信 (JAXA様案件中心)</h3>
+            <p>PowerCMSを用いた大規模Webサイトの更新保守および公式SNS運用を担当。スピード感と厳格な正確性が求められる情報更新に対応。</p>
+            <div class="work-details">
+              <div><strong>担当範囲：</strong> 運用保守、SNS企画・投稿、アクセス解析</div>
+              <div><strong>使用ツール：</strong> PowerCMS, GA4, HTML/CSS/JS</div>
+              <div><strong>ポイント：</strong> GA4データを元にしたアクセス分析から、ユーザー反響を高める投稿設計・導線改善を実施。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work 2 -->
+        <div class="work-card">
+          <div class="work-content">
+            <span class="work-tag">ディレクション / デザイン / コーディング</span>
+            <h3>コーポレートサイト・LP制作 (要件定義〜実装)</h3>
+            <p>ヒアリングから構成案作成、Figma/Ps等からのレスポンシブコーディング、WordPressを用いたCMS化まで一貫して担当。</p>
+            <div class="work-details">
+              <div><strong>担当範囲：</strong> 要件定義、WF作成、コーディング、WP構築</div>
+              <div><strong>使用ツール：</strong> Figma, Photoshop, WordPress, PHP, Git</div>
+              <div><strong>ポイント：</strong> クライアント側で更新が容易なカスタムフィールド設計を行い、納品後の運用負荷を軽減。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work 3 -->
+        <div class="work-card">
+          <div class="work-content">
+            <span class="work-tag">店舗企画 / 社内表彰</span>
+            <h3>店舗20周年記念企画・プロモーション (東急ハンズ時代)</h3>
+            <p>大型店舗の記念周年企画メンバーとして各種プロモーションやマニュアル制作を推進。成果が評価され社内表彰を受賞。</p>
+            <div class="work-details">
+              <div><strong>担当範囲：</strong> 企画立案、VMD/POP制作、進行管理、マニュアル作成</div>
+              <div><strong>使用ツール：</strong> PowerPoint, Word, Excel</div>
+              <div><strong>ポイント：</strong> 多くの関係者を巻き込む調整力と、ユーザー視点に立った魅力的な売場・企画構築。</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STRENGTHS SECTION -->
+  <section id="strengths">
+    <div class="container">
+      <h2 class="section-title">STRENGTHS</h2>
+      <div class="strength-list">
+
+        <div class="strength-item">
+          <h3>1. 大規模サイトの現場知見を活かした「確実な運用・発信力」</h3>
+          <p>JAXA様のWebサイト運用保守（PowerCMS）およびSNS運用で培った実務経験により、正確かつスピード感が求められる情報公開において、ミスのない安定した運用を実現します。</p>
+        </div>
+
+        <div class="strength-item">
+          <h3>2. 現場の課題感＋GA4分析に基づく「サイトリニューアル企画力」</h3>
+          <p>日々の運用で得るユーザーの反響や運用課題に加え、GA4による定量的アクセスデータを組みあわせることで、運用のしやすさとユーザー体験（UX）を両立させた根拠ある改善案・要件定義を立案できます。</p>
+        </div>
+
+        <div class="strength-item">
+          <h3>3. 上流から下流（実装）まで一貫対応できるディレクション能力</h3>
+          <p>ヒアリングや要件定義から、HTML/CSS/JS/PHPを用いたコーディングやGit管理までカバー可能。技術的実現可能性を把握した提案により、手戻りの少ないスムーズな制作進行が可能です。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; PORTFOLIO - Web Director & Front-End Engineer</p>
+    </div>
+  </footer>
+
+</body>
+</html>
